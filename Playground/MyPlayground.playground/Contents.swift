@@ -19,3 +19,24 @@ animais["kkkk"] = "aaaa"
 
 print(animais["urso"]!)
 
+
+var textos:[String] = []
+textos.append("opa")
+textos.append("teste")
+
+
+for var i in 0..<6 {
+    print(i)
+}
+
+for var texto in textos {
+    print(texto)
+}
+
+
+var cont:Int = 0
+while (cont<5) {
+    print("opa")
+    cont += 1
+}
+
