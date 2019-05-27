@@ -13,6 +13,8 @@
 		550BD4D82297907F001BCF6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550BD4D72297907F001BCF6E /* Assets.xcassets */; };
 		550BD4DB2297907F001BCF6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550BD4D92297907F001BCF6E /* LaunchScreen.storyboard */; };
 		550BD4E3229790E1001BCF6E /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BD4E2229790E1001BCF6E /* Filme.swift */; };
+		5561EC58229C826100080EE5 /* FilmeCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561EC57229C826100080EE5 /* FilmeCelula.swift */; };
+		5561EC5A229C86D400080EE5 /* DetalhesFilmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561EC59229C86D400080EE5 /* DetalhesFilmeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		550BD4DA2297907F001BCF6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550BD4DC2297907F001BCF6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		550BD4E2229790E1001BCF6E /* Filme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Filme.swift; path = ../Filme.swift; sourceTree = "<group>"; };
+		5561EC57229C826100080EE5 /* FilmeCelula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmeCelula.swift; sourceTree = "<group>"; };
+		5561EC59229C86D400080EE5 /* DetalhesFilmeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesFilmeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				550BD4E2229790E1001BCF6E /* Filme.swift */,
+				5561EC57229C826100080EE5 /* FilmeCelula.swift */,
 				550BD4D02297907F001BCF6E /* AppDelegate.swift */,
 				550BD4D22297907F001BCF6E /* ViewController.swift */,
+				5561EC59229C86D400080EE5 /* DetalhesFilmeViewController.swift */,
 				550BD4D42297907F001BCF6E /* Main.storyboard */,
 				550BD4D72297907F001BCF6E /* Assets.xcassets */,
 				550BD4D92297907F001BCF6E /* LaunchScreen.storyboard */,
@@ -141,7 +147,9 @@
 			files = (
 				550BD4D32297907F001BCF6E /* ViewController.swift in Sources */,
 				550BD4E3229790E1001BCF6E /* Filme.swift in Sources */,
+				5561EC5A229C86D400080EE5 /* DetalhesFilmeViewController.swift in Sources */,
 				550BD4D12297907F001BCF6E /* AppDelegate.swift in Sources */,
+				5561EC58229C826100080EE5 /* FilmeCelula.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +311,7 @@
 				550BD4E12297907F001BCF6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

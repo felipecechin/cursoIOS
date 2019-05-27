@@ -16,10 +16,10 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         var filme:Filme
-        filme = Filme(titulo: "007", descricao: "descricao01")
+        filme = Filme(titulo: "Filme 01", descricao: "descricao01", imagem: #imageLiteral(resourceName: "filme1"))
         filmes.append(filme)
         
-        filme = Filme(titulo: "Filme 02", descricao: "descricao02")
+        filme = Filme(titulo: "Filme 02", descricao: "descricao02", imagem: #imageLiteral(resourceName: "filme2"))
         filmes.append(filme)
     }
     
@@ -34,10 +34,29 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let filme = filmes[indexPath.row]
         let celulaReuso = "celulaReuso"
-        let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath)
-        celula.textLabel?.text = filme.titulo
+        let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath) as! FilmeCelula
+        celula.filmeImageView.image = filme.imagem
+        celula.titulo.text = filme.titulo
+        celula.descricao.text = filme.descricao
+        
+        
+        /*celula.filmeImageView.layer.cornerRadius = 42
+        celula.filmeImageView.clipsToBounds = true */
+        
+        /*celula.textLabel?.text = filme.titulo
+        celula.imageView?.image = filme.imagem*/
         
         return celula
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detalheFilme" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let filme = self.filmes[indexPath.row]
+                let viewControllerDestino = segue.destination as! DetalhesFilmeViewController
+                viewControllerDestino.filme = filme
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
