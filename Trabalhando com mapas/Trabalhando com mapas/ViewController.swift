@@ -9,11 +9,21 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapa: MKMapView!
+    var gerenciadorLocal = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gerenciadorLocal.delegate = self
+        gerenciadorLocal.desiredAccuracy = kCLLocationAccuracyBest
+        gerenciadorLocal.requestWhenInUseAuthorization()
+        gerenciadorLocal.startUpdatingLocation()
+        
+        
+        /*
         let latitude:CLLocationDegrees = -23.586
         let longitude:CLLocationDegrees = -46.657
         
@@ -32,9 +42,26 @@ class ViewController: UIViewController, MKMapViewDelegate {
         anotacao.title = "São Paulo aqui"
         anotacao.subtitle = "São Paulo fica aqui"
         
-        mapa.addAnnotation(anotacao)
+        mapa.addAnnotation(anotacao)*/
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let localizacaoUsuario: CLLocation = locations.last!
+        
+        let latitude:CLLocationDegrees = localizacaoUsuario.coordinate.latitude
+        let longitude:CLLocationDegrees = localizacaoUsuario.coordinate.longitude
+        print(localizacaoUsuario.description)
+        
+        let deltaLatitude:CLLocationDegrees = 0.01
+        let deltaLongitude:CLLocationDegrees = 0.01
+        
+        let localizacao: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let areaVisualizacao:MKCoordinateSpan = MKCoordinateSpanMake(deltaLatitude, deltaLongitude)
+        
+        let regiao: MKCoordinateRegion = MKCoordinateRegionMake(localizacao, areaVisualizacao)
+        mapa.setRegion(regiao, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
