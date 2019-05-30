@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17G6030" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0gy-IV-kHI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Minhas viagens-->
+        <scene sceneID="cmf-WO-Q7G">
+            <objects>
+                <tableViewController id="d3Y-c4-5pj" customClass="ViewController" customModule="Minhas_viagens" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rbq-7n-IIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celulaReuso" id="DBI-NB-PqE">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DBI-NB-PqE" id="1Iy-Uc-Fla">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="d3Y-c4-5pj" id="E30-ay-ufL"/>
+                            <outlet property="delegate" destination="d3Y-c4-5pj" id="wDU-QB-Aen"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Minhas viagens" id="bVC-95-vyL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3yh-8k-h4z">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="NWX-a9-tbZ" kind="show" id="pRb-Q2-y8V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLN-f7-2pm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479" y="-661"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="WtC-lq-1ew">
+            <objects>
+                <viewController title="Mapa" id="NWX-a9-tbZ" customClass="MapaViagemViewController" customModule="Minhas_viagens" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2vt-cX-N6M"/>
+                        <viewControllerLayoutGuide type="bottom" id="MUh-aV-EHN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0G1-Vx-rDW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WzT-vq-zs6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MUh-aV-EHN" firstAttribute="top" secondItem="WzT-vq-zs6" secondAttribute="bottom" id="AJF-Vm-YwL"/>
+                            <constraint firstItem="WzT-vq-zs6" firstAttribute="leading" secondItem="0G1-Vx-rDW" secondAttribute="leading" id="GTT-S3-AUI"/>
+                            <constraint firstAttribute="trailing" secondItem="WzT-vq-zs6" secondAttribute="trailing" id="WWM-Gh-Ni9"/>
+                            <constraint firstItem="WzT-vq-zs6" firstAttribute="top" secondItem="2vt-cX-N6M" secondAttribute="bottom" id="dd6-0n-WKp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapa" destination="WzT-vq-zs6" id="oyD-VC-YmS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54N-Iv-Tbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="-662.51874062968523"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rai-Om-G9P">
+            <objects>
+                <navigationController id="0gy-IV-kHI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="s35-Vk-CDE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d3Y-c4-5pj" kind="relationship" relationship="rootViewController" id="WDp-L8-IZs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMc-ia-XTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-661"/>
+        </scene>
+    </scenes>
+</document>
