@@ -36,7 +36,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3yh-8k-h4z">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="NWX-a9-tbZ" kind="show" id="pRb-Q2-y8V"/>
+                                <segue destination="NWX-a9-tbZ" kind="show" identifier="verLocal" id="pRb-Q2-y8V"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -81,7 +81,7 @@
         <scene sceneID="Rai-Om-G9P">
             <objects>
                 <navigationController id="0gy-IV-kHI" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="s35-Vk-CDE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s35-Vk-CDE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

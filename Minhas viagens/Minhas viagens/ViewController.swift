@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    var viagens:[String] = []
+    var viagens:[Dictionary<String,String>] = []
+    var controleNavegacao = "adicionar"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,20 +42,43 @@ class ViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        controleNavegacao = "adicionar"
         atualizarViagens()
         tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.controleNavegacao = "listar"
+        performSegue(withIdentifier: "verLocal", sender: indexPath.row)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "verLocal" {
+            let viewControllerDestino = segue.destination as! MapaViagemViewController
+            if self.controleNavegacao == "listar" {
+                if let indiceR = sender {
+                    let indice = indiceR as! Int
+                    viewControllerDestino.viagem = viagens[indice]
+                    viewControllerDestino.indiceSelecionado = indice
+                    
+                }
+            } else {
+                viewControllerDestino.viagem = [:]
+                viewControllerDestino.indiceSelecionado = -1
+            }
+        }
     }
     
     func atualizarViagens(){
         let viagensUserDefaults = ViagensUserDefaults()
         viagens = viagensUserDefaults.listarViagens()
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celulaReuso = "celulaReuso"
         let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath)
-        celula.textLabel?.text = viagens[indexPath.row]
+        celula.textLabel?.text = viagens[indexPath.row]["local"]
         
         return celula
         

@@ -10,17 +10,18 @@ import Foundation
 import UIKit
 
 class ViagensUserDefaults {
-    let chave = "listaViagens"
-    var viagens:[String] = []
+    let chave = "locaisViagem"
+    var viagens:[Dictionary<String, String>] = []
     
-    func adicionarViagem(viagem:String){
+    func adicionarViagem(viagem:Dictionary<String, String>){
         viagens = listarViagens()
         
         viagens.append(viagem)
         UserDefaults.standard.set(viagens, forKey: chave)
+        UserDefaults.standard.synchronize()
     }
     
-    func listarViagens() -> Array<String> {
+    func listarViagens() -> [Dictionary<String, String>] {
         let dados = UserDefaults.standard.object(forKey: chave)
         if dados != nil {
             return dados as! Array
@@ -34,5 +35,6 @@ class ViagensUserDefaults {
         viagens = listarViagens()
         viagens.remove(at: indice)
         UserDefaults.standard.set(viagens, forKey: chave)
+        UserDefaults.standard.synchronize()
     }
 }
