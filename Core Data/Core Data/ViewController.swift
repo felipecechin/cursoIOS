@@ -35,20 +35,40 @@ class ViewController: UIViewController {
         
         let requisicao = NSFetchRequest<NSFetchRequestResult>(entityName: "Usuarios")
         let ordenacao = NSSortDescriptor(key: "nome", ascending: true)
-        let predicate = NSPredicate(format: "nome contains %@", "Felipe Cechin")
-        let predicate2 = NSPredicate(format: "idade <= %@", "30")
+        //let predicate = NSPredicate(format: "nome = %@", "Felipe Cechin")
+        //let predicate2 = NSPredicate(format: "idade <= %@", "30")
         
-        let combinacao = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate, predicate2])
+        //let combinacao = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate, predicate2])
         
         requisicao.sortDescriptors = [ordenacao]
-        requisicao.predicate = combinacao
+        //requisicao.predicate = predicate
         do {
             let usuarios = try context.fetch(requisicao)
             if usuarios.count>0 {
                 for usuario in usuarios as! [NSManagedObject] {
-                    if let nomeUsuario = usuario.value(forKey: "nome") {
-                        print(nomeUsuario)
-                    }
+                    
+                    let nomeUsuario = usuario.value(forKey: "nome")
+                    let login = usuario.value(forKey: "loginUsuario")
+                    print(String(describing: nomeUsuario) + " - " + String(describing: login))
+                    
+                    //deletar
+                    /*context.delete(usuario)
+                    do {
+                        try context.save()
+                        print("Sucesso")
+                    } catch {
+                        print("Erro")
+                    }*/
+                        /*atualizar
+                        usuario.setValue("fikrip", forKey: "loginUsuario")
+                        do {
+                            try context.save()
+                            print("Sucesso")
+                        } catch {
+                            print("Erro")
+                        }*/
+                    
+                    
                 }
             } else {
                 print("sem usuarios")
