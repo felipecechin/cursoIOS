@@ -14,6 +14,7 @@
 		5515CDBD22A8D510003DB9CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5515CDBC22A8D510003DB9CA /* Assets.xcassets */; };
 		5515CDC022A8D510003DB9CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5515CDBE22A8D510003DB9CA /* LaunchScreen.storyboard */; };
 		5515CDC922A8D547003DB9CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5515CDC822A8D547003DB9CA /* MapKit.framework */; };
+		5515CDCB22A9A47E003DB9CA /* CoreDataPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515CDCA22A9A47E003DB9CA /* CoreDataPokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5515CDBF22A8D510003DB9CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5515CDC122A8D510003DB9CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5515CDC822A8D547003DB9CA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5515CDCA22A9A47E003DB9CA /* CoreDataPokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataPokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				5515CDBE22A8D510003DB9CA /* LaunchScreen.storyboard */,
 				5515CDC122A8D510003DB9CA /* Info.plist */,
 				5515CDB922A8D510003DB9CA /* Pokemon_GO.xcdatamodeld */,
+				5515CDCA22A9A47E003DB9CA /* CoreDataPokemon.swift */,
 			);
 			path = "Pokemon GO";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5515CDCB22A9A47E003DB9CA /* CoreDataPokemon.swift in Sources */,
 				5515CDB522A8D510003DB9CA /* ViewController.swift in Sources */,
 				5515CDBB22A8D510003DB9CA /* Pokemon_GO.xcdatamodeld in Sources */,
 				5515CDB322A8D510003DB9CA /* AppDelegate.swift in Sources */,
