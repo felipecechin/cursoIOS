@@ -15,6 +15,8 @@
 		5515CDC022A8D510003DB9CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5515CDBE22A8D510003DB9CA /* LaunchScreen.storyboard */; };
 		5515CDC922A8D547003DB9CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5515CDC822A8D547003DB9CA /* MapKit.framework */; };
 		5515CDCB22A9A47E003DB9CA /* CoreDataPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515CDCA22A9A47E003DB9CA /* CoreDataPokemon.swift */; };
+		5573086422B3096300CD55EA /* PokemonAnotacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573086322B3096300CD55EA /* PokemonAnotacao.swift */; };
+		5573086622B30D5200CD55EA /* PokeAgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573086522B30D5200CD55EA /* PokeAgendaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		5515CDC122A8D510003DB9CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5515CDC822A8D547003DB9CA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5515CDCA22A9A47E003DB9CA /* CoreDataPokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataPokemon.swift; sourceTree = "<group>"; };
+		5573086322B3096300CD55EA /* PokemonAnotacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonAnotacao.swift; sourceTree = "<group>"; };
+		5573086522B30D5200CD55EA /* PokeAgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAgendaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				5515CDC122A8D510003DB9CA /* Info.plist */,
 				5515CDB922A8D510003DB9CA /* Pokemon_GO.xcdatamodeld */,
 				5515CDCA22A9A47E003DB9CA /* CoreDataPokemon.swift */,
+				5573086322B3096300CD55EA /* PokemonAnotacao.swift */,
+				5573086522B30D5200CD55EA /* PokeAgendaViewController.swift */,
 			);
 			path = "Pokemon GO";
 			sourceTree = "<group>";
@@ -155,9 +161,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5515CDCB22A9A47E003DB9CA /* CoreDataPokemon.swift in Sources */,
+				5573086422B3096300CD55EA /* PokemonAnotacao.swift in Sources */,
 				5515CDB522A8D510003DB9CA /* ViewController.swift in Sources */,
 				5515CDBB22A8D510003DB9CA /* Pokemon_GO.xcdatamodeld in Sources */,
 				5515CDB322A8D510003DB9CA /* AppDelegate.swift in Sources */,
+				5573086622B30D5200CD55EA /* PokeAgendaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +327,7 @@
 				5515CDC622A8D510003DB9CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
