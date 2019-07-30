@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		556E16E622EF8EAC00FE71FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556E16E522EF8EAC00FE71FA /* AppDelegate.swift */; };
+		556E16E822EF8EAC00FE71FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556E16E722EF8EAC00FE71FA /* ViewController.swift */; };
+		556E16EB22EF8EAC00FE71FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556E16E922EF8EAC00FE71FA /* Main.storyboard */; };
+		556E16ED22EF8EAC00FE71FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556E16EC22EF8EAC00FE71FA /* Assets.xcassets */; };
+		556E16F022EF8EAC00FE71FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556E16EE22EF8EAC00FE71FA /* LaunchScreen.storyboard */; };
+		556E16FE22EF929700FE71FA /* cao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 556E16FD22EF8EC100FE71FA /* cao.mp3 */; };
+		556E16FF22EF929700FE71FA /* gato.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 556E16FA22EF8EC000FE71FA /* gato.mp3 */; };
+		556E170022EF929700FE71FA /* leao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 556E16FC22EF8EC100FE71FA /* leao.mp3 */; };
+		556E170122EF929700FE71FA /* macaco.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 556E16F922EF8EC000FE71FA /* macaco.mp3 */; };
+		556E170222EF929700FE71FA /* ovelha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 556E16F822EF8EC000FE71FA /* ovelha.mp3 */; };
+		556E170322EF929700FE71FA /* vaca.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 556E16FB22EF8EC000FE71FA /* vaca.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		556E16E222EF8EAC00FE71FA /* Som dos bichos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Som dos bichos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		556E16E522EF8EAC00FE71FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		556E16E722EF8EAC00FE71FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		556E16EA22EF8EAC00FE71FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		556E16EC22EF8EAC00FE71FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		556E16EF22EF8EAC00FE71FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		556E16F122EF8EAC00FE71FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		556E16F822EF8EC000FE71FA /* ovelha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ovelha.mp3; sourceTree = "<group>"; };
+		556E16F922EF8EC000FE71FA /* macaco.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = macaco.mp3; sourceTree = "<group>"; };
+		556E16FA22EF8EC000FE71FA /* gato.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gato.mp3; sourceTree = "<group>"; };
+		556E16FB22EF8EC000FE71FA /* vaca.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vaca.mp3; sourceTree = "<group>"; };
+		556E16FC22EF8EC100FE71FA /* leao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = leao.mp3; sourceTree = "<group>"; };
+		556E16FD22EF8EC100FE71FA /* cao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cao.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		556E16DF22EF8EAC00FE71FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		556E16D922EF8EAC00FE71FA = {
+			isa = PBXGroup;
+			children = (
+				556E16E422EF8EAC00FE71FA /* Som dos bichos */,
+				556E16E322EF8EAC00FE71FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		556E16E322EF8EAC00FE71FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				556E16E222EF8EAC00FE71FA /* Som dos bichos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		556E16E422EF8EAC00FE71FA /* Som dos bichos */ = {
+			isa = PBXGroup;
+			children = (
+				556E16F722EF8EB400FE71FA /* sons */,
+				556E16E522EF8EAC00FE71FA /* AppDelegate.swift */,
+				556E16E722EF8EAC00FE71FA /* ViewController.swift */,
+				556E16E922EF8EAC00FE71FA /* Main.storyboard */,
+				556E16EC22EF8EAC00FE71FA /* Assets.xcassets */,
+				556E16EE22EF8EAC00FE71FA /* LaunchScreen.storyboard */,
+				556E16F122EF8EAC00FE71FA /* Info.plist */,
+			);
+			path = "Som dos bichos";
+			sourceTree = "<group>";
+		};
+		556E16F722EF8EB400FE71FA /* sons */ = {
+			isa = PBXGroup;
+			children = (
+				556E16FD22EF8EC100FE71FA /* cao.mp3 */,
+				556E16FA22EF8EC000FE71FA /* gato.mp3 */,
+				556E16FC22EF8EC100FE71FA /* leao.mp3 */,
+				556E16F922EF8EC000FE71FA /* macaco.mp3 */,
+				556E16F822EF8EC000FE71FA /* ovelha.mp3 */,
+				556E16FB22EF8EC000FE71FA /* vaca.mp3 */,
+			);
+			path = sons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		556E16E122EF8EAC00FE71FA /* Som dos bichos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 556E16F422EF8EAC00FE71FA /* Build configuration list for PBXNativeTarget "Som dos bichos" */;
+			buildPhases = (
+				556E16DE22EF8EAC00FE71FA /* Sources */,
+				556E16DF22EF8EAC00FE71FA /* Frameworks */,
+				556E16E022EF8EAC00FE71FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Som dos bichos";
+			productName = "Som dos bichos";
+			productReference = 556E16E222EF8EAC00FE71FA /* Som dos bichos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		556E16DA22EF8EAC00FE71FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Felipe;
+				TargetAttributes = {
+					556E16E122EF8EAC00FE71FA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 556E16DD22EF8EAC00FE71FA /* Build configuration list for PBXProject "Som dos bichos" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 556E16D922EF8EAC00FE71FA;
+			productRefGroup = 556E16E322EF8EAC00FE71FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				556E16E122EF8EAC00FE71FA /* Som dos bichos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		556E16E022EF8EAC00FE71FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				556E16FE22EF929700FE71FA /* cao.mp3 in Resources */,
+				556E16FF22EF929700FE71FA /* gato.mp3 in Resources */,
+				556E170022EF929700FE71FA /* leao.mp3 in Resources */,
+				556E170122EF929700FE71FA /* macaco.mp3 in Resources */,
+				556E170222EF929700FE71FA /* ovelha.mp3 in Resources */,
+				556E170322EF929700FE71FA /* vaca.mp3 in Resources */,
+				556E16F022EF8EAC00FE71FA /* LaunchScreen.storyboard in Resources */,
+				556E16ED22EF8EAC00FE71FA /* Assets.xcassets in Resources */,
+				556E16EB22EF8EAC00FE71FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		556E16DE22EF8EAC00FE71FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				556E16E822EF8EAC00FE71FA /* ViewController.swift in Sources */,
+				556E16E622EF8EAC00FE71FA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		556E16E922EF8EAC00FE71FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				556E16EA22EF8EAC00FE71FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		556E16EE22EF8EAC00FE71FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				556E16EF22EF8EAC00FE71FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		556E16F222EF8EAC00FE71FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		556E16F322EF8EAC00FE71FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		556E16F522EF8EAC00FE71FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Som dos bichos/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cursoios.Som-dos-bichos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		556E16F622EF8EAC00FE71FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Som dos bichos/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cursoios.Som-dos-bichos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		556E16DD22EF8EAC00FE71FA /* Build configuration list for PBXProject "Som dos bichos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				556E16F222EF8EAC00FE71FA /* Debug */,
+				556E16F322EF8EAC00FE71FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		556E16F422EF8EAC00FE71FA /* Build configuration list for PBXNativeTarget "Som dos bichos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				556E16F522EF8EAC00FE71FA /* Debug */,
+				556E16F622EF8EAC00FE71FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 556E16DA22EF8EAC00FE71FA /* Project object */;
+}
