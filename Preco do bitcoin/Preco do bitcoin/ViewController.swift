@@ -11,9 +11,9 @@ import Foundation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var botao: UIButton!
     
     @IBOutlet weak var precoBitcoin: UILabel!
+    @IBOutlet weak var botao: UIButton!
     
     @IBAction func atualizarPreco(_ sender: Any) {
         self.recuperarPreco()
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
                         do {
                             if let objetoJSON = try JSONSerialization.jsonObject(with: dadosRetorno, options: []) as? [String: Any] {
                                 if let brl = objetoJSON["BRL"] as? [String: Any] {
-                                    if let preco = brl["buy"] as? Float {
+                                    if let preco = brl["buy"] as? Double {
                                         let precoFormatado = self.formatarPreco(preco: NSNumber(value: preco))
                                         
                                         DispatchQueue.main.async(execute: {
