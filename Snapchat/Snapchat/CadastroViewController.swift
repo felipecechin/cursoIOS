@@ -27,7 +27,11 @@ class CadastroViewController: UIViewController {
                         let usuario = Auth.auth()
                         usuario.createUser(withEmail: emailR, password: senha) { (usuario, erro) in
                             if erro == nil {
-                                print("sucesso")
+                                if usuario == nil {
+                                    self.exibirMensagem(titulo: "Erro ao autenticar", mensagem: "Problemas. Tente novamente")
+                                } else {
+                                    self.performSegue(withIdentifier: "cadastroLoginSegue", sender: nil)
+                                }
                             } else {
                                 let erroR = erro! as NSError
                                 let indice = "FIRAuthErrorUserInfoNameKey"
