@@ -20,23 +20,18 @@ class EntrarViewController: UIViewController {
                 autenticacao.signIn(withEmail: emailR, password: senhaR, completion: { (usuario, erro) in
                     if erro == nil {
                         if usuario == nil {
-                            self.exibirMensagem(titulo: "Dados inválidos", mensagem: "Verifique os dados digitados.")
+                            let alerta = Alerta(titulo: "Erro", mensagem: "Erro ao logar")
+                            self.present(alerta.getAlerta(), animated: true, completion: nil)
                         } else {
                             self.performSegue(withIdentifier: "loginSegue", sender: nil)
                         }
                     } else {
-                        self.exibirMensagem(titulo: "Dados inválidos", mensagem: "Verifique os dados digitados.")
+                        let alerta = Alerta(titulo: "Erro", mensagem: "Erro ao logar")
+                        self.present(alerta.getAlerta(), animated: true, completion: nil)
                     }
                 })
             }
         }
-    }
-    
-    func exibirMensagem(titulo: String, mensagem: String) {
-        let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
-        let acao = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-        alerta.addAction(acao)
-        present(alerta, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

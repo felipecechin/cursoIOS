@@ -13,8 +13,8 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet weak var imagem: UIImageView!
     var imagePicker = UIImagePickerController()
-    
     @IBOutlet weak var botaoProximo: UIButton!
+    var idImagem = NSUUID().uuidString
     @IBAction func selecionarFoto(_ sender: Any) {
         imagePicker.sourceType = .savedPhotosAlbum
         present(imagePicker, animated: true, completion: nil)
@@ -29,23 +29,45 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let imagens = armazenamento.child("imagens")
         
         if let imagemSelecionada = imagem.image {
-            if let imagemDados = imagemSelecionada.jpegData(compressionQuality: 0.5) {
-                imagens.child("imagem.jpg").putData(imagemDados, metadata: nil, completion: { (metaDados, erro) in
+            if let imagemDados = imagemSelecionada.jpegData(compressionQuality: 0.1) {
+                imagens.child("\(self.idImagem).jpg").putData(imagemDados, metadata: nil, completion: { (metaDados, erro) in
                     if erro == nil {
-                        print("sucesso")
-                        
-                        self.botaoProximo.isEnabled = true
-                        self.botaoProximo.setTitle("Próximo", for: .normal)
+                        imagens.child("\(self.idImagem).jpg").downloadURL(completion: { (url, erro) in
+                            if(erro == nil) {
+                                if let urlR = url?.absoluteString {
+                                    self.performSegue(withIdentifier: "selecionarUsuarioSegue", sender: urlR)
+                                    self.botaoProximo.isEnabled = true
+                                    self.botaoProximo.setTitle("Próximo", for: .normal)
+                                }
+                            }else{
+                                print(erro!);
+                            }
+                        })
                     } else {
-                        print("erro")
+                        let alerta = Alerta(titulo: "Upload falhou", mensagem: "Erro ao salvar arquivo")
+                        self.present(alerta.getAlerta(), animated: true, completion: nil)
                     }
                 })
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selecionarUsuarioSegue" {
+            let usuarioViewController = segue.destination as! UsuariosTableViewController
+            usuarioViewController.descricao = self.descricao.text!
+            usuarioViewController.urlImagem = sender as! String
+            usuarioViewController.idImagem = self.idImagem
+            
+        }
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let imagemRecuperada = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         imagem.image = imagemRecuperada
+        
+        self.botaoProximo.isEnabled = true
+        self.botaoProximo.backgroundColor = UIColor(red: 0.553, green: 0.369, blue: 0.749, alpha: 1)
         imagePicker.dismiss(animated: true, completion: nil)
     }
     @IBOutlet weak var descricao: UITextField!
@@ -53,6 +75,9 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         super.viewDidLoad()
 
         imagePicker.delegate = self
+        
+        botaoProximo.isEnabled = false
+        botaoProximo.backgroundColor = UIColor.gray
         // Do any additional setup after loading the view.
     }
     
