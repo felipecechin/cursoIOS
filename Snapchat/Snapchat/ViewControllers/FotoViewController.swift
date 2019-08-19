@@ -16,9 +16,13 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var botaoProximo: UIButton!
     var idImagem = NSUUID().uuidString
     @IBAction func selecionarFoto(_ sender: Any) {
-        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     @IBAction func proximoPasso(_ sender: Any) {

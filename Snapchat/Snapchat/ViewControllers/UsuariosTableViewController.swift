@@ -24,12 +24,17 @@ class UsuariosTableViewController: UITableViewController {
         usuarios.observe(DataEventType.childAdded, with: { (snapshot) in
             let dados = snapshot.value as? NSDictionary
             
+            let autenticacao = Auth.auth()
+            let idUsuarioLogado = autenticacao.currentUser?.uid
+            
             let emailUsuario = dados?["email"] as! String
             let nomeUsuario = dados?["nome"] as! String
             let idUsuario = snapshot.key
             
             let usuario = Usuario(email: emailUsuario, nome: nomeUsuario, uid: idUsuario)
-            self.usuarios.append(usuario)
+            if idUsuario != idUsuarioLogado {
+                self.usuarios.append(usuario)
+            }
             
             print(self.usuarios)
             self.tableView.reloadData()
@@ -86,7 +91,7 @@ class UsuariosTableViewController: UITableViewController {
                     "idImagem": self.idImagem
                 ]
                 snaps.childByAutoId().setValue(snap)
-                
+                self.navigationController?.popToRootViewController(animated: true)
             }
         }
     }

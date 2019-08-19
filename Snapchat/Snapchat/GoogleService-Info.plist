@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>268827330864-hk7d2g1hjudhag37crh5287kodg5815k.apps.googleusercontent.com</string>
+	<string>268827330864-lim93evg14qu2vae6h0oumu78hibdprs.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.268827330864-hk7d2g1hjudhag37crh5287kodg5815k</string>
+	<string>com.googleusercontent.apps.268827330864-lim93evg14qu2vae6h0oumu78hibdprs</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAxrhm3zOMRVmt-GEXMCKagNqC8Ba5RG-c</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.cursoios.Snapchat</string>
+	<string>com.felipe121231.snap</string>
 	<key>PROJECT_ID</key>
 	<string>snapchat-1249d</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:268827330864:ios:aaed99c03595ebdc</string>
+	<string>1:268827330864:ios:d221c045fb520b7e</string>
 	<key>DATABASE_URL</key>
 	<string>https://snapchat-1249d.firebaseio.com</string>
 </dict>
